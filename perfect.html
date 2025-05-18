@@ -13,6 +13,28 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode h5 {
+  color: #ffffff;
+}
+
+body.dark-mode .w3-bar {
+  background-color: #222 !important;
+}
+
+body.dark-mode .w3-bar .w3-bar-item {
+  color: #ffffff !important;
+}
+
+body.dark-mode .w3-light-grey {
+  background-color: #1e1e1e !important;
+}
+
+  
 </style>
 </head>
 <div id="myDIV">
@@ -23,6 +45,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-yellow w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-yellow">Home</a>
+    <i class="w3-btn w3-bar-item w3-margin-center w3-right material-icons w3-text-white" style="font-size:28px" onclick="toggleDarkMode()">brightness_6</i>
     <a href="perfect.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Perfect</a>
     <a href="sin.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Sin</a>
     <a href="death.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Death</a>
@@ -36,6 +59,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    
     <a href="perfect.html" class="w3-bar-item w3-button w3-padding-large">Perfect</a>
     <a href="sin.html" class="w3-bar-item w3-button w3-padding-large">Sin</a>
     <a href="death.html" class="w3-bar-item w3-button w3-padding-large">Death</a>
@@ -152,6 +176,12 @@ function myFunction() {
   }
 }
 </script>
+ <script>
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
+ 
 <script src="script.js"></script>
 </body>
 </div>
