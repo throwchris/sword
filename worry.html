@@ -16,7 +16,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .my-enlarge-text:hover {
   font-size: 200%; /* Adjust as needed */
 }
-
+.my-enlarge-text {
+    transition: font-size 0.3s ease;
+    cursor: pointer;
+  }
 .dark-mode {
   background-color: #121212;
   color: white;
@@ -155,6 +158,21 @@ function myFunction() {
   let x = document.body;
   x.classList.toggle("dark-mode");
 }
+
+  document.querySelectorAll('.my-enlarge-text').forEach(function (el) {
+    el.addEventListener('mouseenter', () => {
+      el.classList.add('enlarged');
+
+      // Remove after 10 seconds
+      setTimeout(() => {
+        el.classList.remove('enlarged');
+      }, 20000); // 20000 ms = 10 seconds
+    });
+
+    el.addEventListener('click', () => {
+      el.classList.remove('enlarged');
+    });
+  });
     </script>
 </body>
 </div>
