@@ -13,13 +13,15 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
-.my-enlarge-text:hover {
-  font-size: 200%; /* Adjust as needed */
-}
 .my-enlarge-text {
     transition: font-size 0.3s ease;
     cursor: pointer;
   }
+
+  .enlarged {
+    font-size: 200%; /* or whatever size you want */
+  }
+
 .dark-mode {
   background-color: #121212;
   color: white;
@@ -159,7 +161,7 @@ function myFunction() {
   x.classList.toggle("dark-mode");
 }
 
-  document.querySelectorAll('.my-enlarge-text').forEach(function (el) {
+document.querySelectorAll('.my-enlarge-text').forEach(function (el) {
     el.addEventListener('mouseenter', () => {
       el.classList.add('enlarged');
 
@@ -177,7 +179,3 @@ function myFunction() {
 </body>
 </div>
 </html>
-
-
-
-    
