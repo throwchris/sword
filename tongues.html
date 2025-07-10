@@ -120,6 +120,16 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+  function myFunction2() {
+  let body = document.body;
+  body.classList.toggle("dark-mode");
+
+  // Toggle light-blue text on all elements with class "verse"
+  document.querySelectorAll('.verse').forEach(el => {
+    el.classList.toggle("w3-text-light-blue");
+  });
+}
 </script>
 <script src="script.js"></script>
 </body>
