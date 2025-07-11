@@ -9,18 +9,38 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/d1a6249b79.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="style.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
-.my-enlarge-text:hover {
-  font-size: 200%; /* Adjust as needed */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
 
-.dark-mode {
+body.dark-mode h5 {
+  color: #ffffff;
+}
+
+body.dark-mode .w3-bar {
+  background-color: #222 !important;
+}
+
+body.dark-mode .w3-bar .w3-bar-item {
+  color: #ffffff !important;
+}
+
+body.dark-mode .w3-light-grey {
+  background-color: #1e1e1e !important;
+}
+
+/*.dark-mode {
   background-color: #121212;
   color: white;
-}
+}*/
 </style>
 </head>
 
@@ -31,6 +51,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card  w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-yellow w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-yellow">Home</a>
+    
+    
     <a href="perfect.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Perfect</a>
     <a href="sin.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Sin</a>
     <a href="death.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Death</a>
@@ -39,8 +61,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <a href="tongues.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Tongues</a>
     <a href="fp.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">False Prophet</a>
     <a href="life.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Life</a>
-    <a href="javascript:void(0);" class="w3-right w3-bar-item w3-button w3-padding-large w3-hover-yellow" onclick="myFunction2()">Night Mode</a>
-
+    
+    <i class="w3-btn w3-bar-item w3-margin-center w3-right material-icons w3-text-white" style="font-size:36px" onclick="myFunction4()">find_in_page</i>
+    <i class="w3-btn w3-bar-item w3-margin-center w3-right material-icons w3-text-white " style="font-size:36px" onclick="toggleDarkMode()">brightness_6</i>
     
   </div>
 
@@ -76,43 +99,36 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     
       <div class="w3-two-third">
         <h1 class="w3-center">Worry</h1><br>
-        <div class="w3-container">
-            <h5 class="my-enlarge-text">
-                <strong><span class="verse">Gen 3:16</span></strong> Unto the woman he said, I will greatly multiply thy 
-                <span onclick="toggleExplanation(this, 'Strongs #H6087: עִצָּבוֹן itstsâbôwn, its-tsaw-bone — worrisomeness i.e. labor or pain:—sorrow, toil')" class="w3-text-green"><strong>sorrow</strong></span>
-                and thy conception; in 
-                <span onclick="toggleExplanation(this, 'Strongs #H6089: עֶצֶב ʻetseb, eh\'-tseb; from H6087; an earthen vessel; usually (painful) toil; also a pang (whether of body or mind):—grievous, idol, labor, sorrow.')" class="w3-text-green"><strong>sorrow</strong></span>
-
-                thou shalt bring forth children; and thy desire shall be to thy husband, and he shall rule over thee.
-              </h5><br>
+        <div id="font" class="w3-container">
+            
               
-        <h5 class="my-enlarge-text"><strong><span class="verse">Psa 55:22</span></strong> Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved.</h5><br>
+        <p><span class="verse">Psa 55:22</span> Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved.</h5><br>
         
         
-        <h5 class="my-enlarge-text"><strong><span class="verse">Mat 11:28</span></strong> <span class= w3-text-red>Come unto me, all ye that labour and are heavy laden, and I will give you rest.</span></h5>
-        <h5 class="my-enlarge-text"><strong><span class="verse">Mat 11:29</span></strong> <span class= w3-text-red>Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls.</span></h5>
-        <h5 class="my-enlarge-text"><strong><span class="verse">Mat 11:30</span></strong> <span class= w3-text-red>For my <span onclick="toggleExplanation(this, 'Strongs# G2218 ζυγός zygós, dzoo-gos\'; from the root of ζεύγνυμι zeúgnymi (to join, especially by a &quot;yoke&quot;); a coupling, i.e. (figuratively) servitude (a law or obligation); also (literally) the beam of the balance (as connecting the scales):—pair of balances, yoke.')" class="w3-text-green">
-            <strong>yoke</strong>
+        <p><span class="verse">Mat 11:28</span> <span class= w3-text-red>Come unto me, all ye that labour and are heavy laden, and I will give you rest.</span></h5>
+        <p><span class="verse">Mat 11:29</span> <span class= w3-text-red>Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls.</span></h5>
+        <p><span class="verse">Mat 11:30</span> <span class= w3-text-red>For my <span onclick="toggleExplanation(this, 'Strongs# G2218 ζυγός zygós, dzoo-gos\'; from the root of ζεύγνυμι zeúgnymi (to join, especially by a &quot;yoke&quot;); a coupling, i.e. (figuratively) servitude (a law or obligation); also (literally) the beam of the balance (as connecting the scales):—pair of balances, yoke.')" class="w3-text-green">
+            yoke
           </span>
            is easy, and my burden is light.</span></h5>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Luk 1:37</span></strong> For with God nothing shall be impossible.</h5>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Joh 14:27</span></strong> <span class= w3-text-red>Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.</span></h5><br>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Rom 8:31</span></strong> What shall we then say to these things? If God be for us, who can be against us?</h5>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Rom 8:32</span></strong> He that spared not his own Son, but delivered him up for us all, how shall he not with him also freely give us all things? </h5>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Rom 8:33</span></strong> Who shall lay any thing to the charge of God's elect? It is God that justifieth.</h5>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Rom 8:34</span></strong> Who is he that condemneth? It is Christ that died, yea rather, that is risen again, who is even at the right hand of God, who also maketh intercession for us.</h5>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Rom 8:35</span></strong> Who shall separate us from the love of Christ? shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword?</h5>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Rom 8:36</span></strong> As it is written, For thy sake we are killed all the day long; we are accounted as sheep for the slaughter.</h5>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Rom 8:37</span></strong> Nay, in all these things we are more than conquerors through him that loved us.</h5>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Rom 8:38</span></strong> For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,</h5>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Rom 8:39</span></strong> Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.</h5><br>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Philip 4:6</span></strong> Be <span onclick="toggleExplanation(this, 'Strongs #G3309: μεριμνάω merimnáō, mer-im-nah-o; from G3308; to be anxious about:—(be, have) care (-ful), take thought.')" class="w3-text-green"><strong>careful</strong></span> for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.</h5>
+        <p> <span class="verse">Luk 1:37</span> For with God nothing shall be impossible.</h5>
+        <p> <span class="verse">Joh 14:27</span> <span class= w3-text-red>Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.</span></h5><br>
+        <p> <span class="verse">Rom 8:31</span> What shall we then say to these things? If God be for us, who can be against us?</h5>
+        <p> <span class="verse">Rom 8:32</span> He that spared not his own Son, but delivered him up for us all, how shall he not with him also freely give us all things? </h5>
+        <p> <span class="verse">Rom 8:33</span> Who shall lay any thing to the charge of God's elect? It is God that justifieth.</h5>
+        <p> <span class="verse">Rom 8:34</span> Who is he that condemneth? It is Christ that died, yea rather, that is risen again, who is even at the right hand of God, who also maketh intercession for us.</h5>
+        <p> <span class="verse">Rom 8:35</span> Who shall separate us from the love of Christ? shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword?</h5>
+        <p> <span class="verse">Rom 8:36</span> As it is written, For thy sake we are killed all the day long; we are accounted as sheep for the slaughter.</h5>
+        <p> <span class="verse">Rom 8:37</span> Nay, in all these things we are more than conquerors through him that loved us.</h5>
+        <p> <span class="verse">Rom 8:38</span> For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,</h5>
+        <p> <span class="verse">Rom 8:39</span> Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.</h5><br>
+        <p> <span class="verse">Philip 4:6</span> Be <span onclick="toggleExplanation(this, 'Strongs #G3309: μεριμνάω merimnáō, mer-im-nah-o; from G3308; to be anxious about:—(be, have) care (-ful), take thought.')" class="w3-text-green">careful</span> for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.</h5>
         
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Philip 4:7</span></strong> And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.</h5>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Philip 4:13</span></strong> I can do all things through Christ which strengtheneth me.</h5>
-        <h5 class="my-enlarge-text"> <strong><span class="verse">Philip 4:19</span></strong> But my God shall supply all your need according to his riches in glory by Christ Jesus.</h5>
+        <p> <span class="verse">Philip 4:7</span> And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.</h5>
+        <p> <span class="verse">Philip 4:13</span> I can do all things through Christ which strengtheneth me.</h5>
+        <p> <span class="verse">Philip 4:19</span> But my God shall supply all your need according to his riches in glory by Christ Jesus.</h5>
         
-        <h5 class="my-enlarge-text"> <strong><span class="verse">1 Pet 5:7</span></strong> Casting all your care upon him; for he careth for you.</h5><br>
+        <p> <span class="verse">1 Pet 5:7</span> Casting all your care upon him; for he careth for you.</h5><br>
 
         
     
@@ -163,20 +179,37 @@ function myFunction() {
       }
     }
 
-    function myFunction2() {
-  let body = document.body;
-  body.classList.toggle("dark-mode");
+    function myFunction4() {
+  var element = document.getElementById("font");
+  if (element.classList === "w3-large") {
+    element.classList.toggle("w3-xlarge") 
+  } else {
+    element.classList.toggle("w3-xlarge")
+  }
 
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
   // Toggle light-blue text on all elements with class "verse"
   document.querySelectorAll('.verse').forEach(el => {
     el.classList.toggle("w3-text-light-blue");
   });
 }
+
+
+
+
+    //function myFunction2() {
+  //let body = document.body;
+  //body.classList.toggle("dark-mode");
+
+  // Toggle light-blue text on all elements with class "verse"
+  //document.querySelectorAll('.verse').forEach(el => {
+    //el.classList.toggle("w3-text-light-blue");
+  //});
+//}
     </script>
 </body>
 </div>
 </html>
-
-
-
-    
