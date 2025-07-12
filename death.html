@@ -8,11 +8,33 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/d1a6249b79.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode h5 {
+  color: #ffffff;
+}
+
+body.dark-mode .w3-bar {
+  background-color: #222 !important;
+}
+
+body.dark-mode .w3-bar .w3-bar-item {
+  color: #ffffff !important;
+}
+
+body.dark-mode .w3-light-grey {
+  background-color: #1e1e1e !important;
+}
 </style>
 </head>
 <div id="myDIV">
@@ -20,28 +42,35 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+  <div class="w3-bar w3-black w3-card  w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-yellow w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-yellow">Home</a>
-    <a href="perfect.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Perfect</a>
+    
+    
+    <a href="worry.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Worry</a>
     <a href="sin.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Sin</a>
+    <a href="death.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">False Prophet</a>
+   
     <a href="hg.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">The Holy Ghost</a>
     <a href="tongues.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Tongues</a>
-    <a href="fp.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">False Prophet</a>
+    <a href="perfect.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Perfect</a>
     <a href="life.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Life</a>
-    <a href="life.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Worry</a>
+    
+    <i class="w3-btn w3-bar-item w3-margin-center w3-right material-icons w3-text-white" style="font-size:36px" onclick="myFunction4()">find_in_page</i>
+    <i class="w3-btn w3-bar-item w3-margin-center w3-right material-icons w3-text-white " style="font-size:36px" onclick="toggleDarkMode()">brightness_6</i>
     
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="perfect.html" class="w3-bar-item w3-button w3-padding-large">Perfect</a>
+    <a href="worry.html" class="w3-bar-item w3-button w3-padding-large">Worry</a>
     <a href="sin.html" class="w3-bar-item w3-button w3-padding-large">Sin</a>
+    <a href="death.html" class="w3-bar-item w3-button w3-padding-large">False Prophet</a>
+    
     <a href="hg.html" class="w3-bar-item w3-button w3-padding-large">The Holy Ghost</a>
     <a href="tongues.html" class="w3-bar-item w3-button w3-padding-large">Tongues</a>
-    <a href="fp.html" class="w3-bar-item w3-button w3-padding-large">False Prophet</a>
+    <a href="perfect.html" class="w3-bar-item w3-button w3-padding-large">Perfect</a>
     <a href="life.html" class="w3-bar-item w3-button w3-padding-large">Life</a>
-    <a href="worry.html" class="w3-bar-item w3-button w3-padding-large">Worry</a>
    
 
   </div>
@@ -59,39 +88,40 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 
 <!-- Second Grid -->
-<div class="w3-light-grey w3-padding-64 w3-container">
+<div class="w3-padding-64 w3-container">
   <div class="w3-content">
     
     
       <div class="w3-two-third">
         <h1 class="w3-center">No More Death</h1><br>
-        <h5>Gen_2:17  But of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.</h5><br>
-        <h5>Psa_118:17  I shall not die, but live, and declare the works of the LORD.</h5><br>
-        <h5>Joh_11:26  And whosoever liveth and believeth in me shall never die. Believest thou this?</h5><br>
-        <h5>Joh_5:24  Verily, verily, I say unto you, He that heareth my word, and believeth on him that sent me, hath everlasting life, and shall not come into condemnation; but is passed from death unto life.</h5><br>
-        <h5>Joh_6:50  This is the bread which cometh down from heaven, that a man may eat thereof, and not die.</h5><br>
-        <h5>Joh_8:24  I said therefore unto you, that ye shall die in your sins: for if ye believe not that I am he, ye shall die in your sins.</h5><br>
-        <h5>Rom_5:10  For if, when we were enemies, we were reconciled to God by the death of his Son, much more, being reconciled, we shall be saved by his life.</h5><br>
-        <h5>Rom_5:12  Wherefore, as by one man sin entered into the world, and death by sin; and so death passed upon all men, for that all have sinned:</h5><br>
-        <h5>Rom_5:14  Nevertheless death reigned from Adam to Moses, even over them that had not sinned after the similitude of Adam's transgression, who is the figure of him that was to come</h5><br>   
-        <h5>Rom_5:17  For if by one man's offence death reigned by one; much more they which receive abundance of grace and of the gift of righteousness shall reign in life by one, Jesus Christ.)</h5><br>
-        <h5>Rom_5:21  That as sin hath reigned unto death, even so might grace reign through righteousness unto eternal life by Jesus Christ our Lord.</h5><br>
-        <h5>Rom_6:3  Know ye not, that so many of us as were baptized into Jesus Christ were baptized into his death?</h5><br>
-        <h5>Rom_6:4  Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life.</h5><br>
-        <h5>Rom_6:5  For if we have been planted together in the likeness of his death, we shall be also in the likeness of his resurrection:</h5><br>
-        <h5>Rom_6:9  Knowing that Christ being raised from the dead dieth no more; death hath no more dominion over him.</h5><br>
-        <h5>Rom_6:16  Know ye not, that to whom ye yield yourselves servants to obey, his servants ye are to whom ye obey; whether of sin unto death, or of obedience unto righteousness?</h5><br>
-        <h5>Rom_6:21  What fruit had ye then in those things whereof ye are now ashamed? for the end of those things is death.</h5><br>
-        <h5>Rom_6:23  For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.</h5><br>
-        <h5>Rom_7:5  For when we were in the flesh, the motions of sins, which were by the law, did work in our members to bring forth fruit unto death.</h5><br>
-        <h5>Rom_8:6  For to be carnally minded is death; but to be spiritually minded is life and peace.</h5><br>
-        <h5>1Co_15:21  For since by man came death, by man came also the resurrection of the dead.</h5><br>
-        <h5>1Co_15:26  The last enemy that shall be destroyed is death.</h5><br>
-        <h5>1Co_15:54  So when this corruptible shall have put on incorruption, and this mortal shall have put on immortality, then shall be brought to pass the saying that is written, Death is swallowed up in victory.</h5><br>
-        <h5>Jas_1:15  Then when lust hath conceived, it bringeth forth sin: and sin, when it is finished, bringeth forth death.</h5><br>
-        <h5>Rev_21:4  And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away.
+        <div id="font" class="w3-container">
+        <p><span class="verse">Gen_2:17</span> But of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.</h5><br>
+        <p><span class="verse">Psa_118:17</span> I shall not die, but live, and declare the works of the LORD.</h5><br>
+        <p><span class="verse">Joh_11:26</span> <span class="w3-text-red">And whosoever liveth and believeth in me shall never die. Believest thou this?</span></h5><br>
+        <p><span class="verse">Joh_5:24</span> <span class="w3-text-red">Verily, verily, I say unto you, He that heareth my word, and believeth on him that sent me, hath everlasting life, and shall not come into condemnation; but is passed from death unto life.</span></h5><br>
+        <p><span class="verse">Joh_6:50</span> <span class="w3-text-red">This is the bread which cometh down from heaven, that a man may eat thereof, and not die.</span></h5><br>
+        <p><span class="verse">Joh_8:24</span> <span class="w3-text-red">I said therefore unto you, that ye shall die in your sins: for if ye believe not that I am he, ye shall die in your sins.</span></h5><br>
+        <p><span class="verse">Rom_5:10</span> For if, when we were enemies, we were reconciled to God by the death of his Son, much more, being reconciled, we shall be saved by his life.</h5><br>
+        <p><span class="verse">Rom_5:12</span> Wherefore, as by one man sin entered into the world, and death by sin; and so death passed upon all men, for that all have sinned:</h5><br>
+        <p><span class="verse">Rom_5:14</span> Nevertheless death reigned from Adam to Moses, even over them that had not sinned after the similitude of Adam's transgression, who is the figure of him that was to come</h5><br>   
+        <p><span class="verse">Rom_5:17</span> For if by one man's offence death reigned by one; much more they which receive abundance of grace and of the gift of righteousness shall reign in life by one, Jesus Christ.)</h5><br>
+        <p><span class="verse">Rom_5:21</span> That as sin hath reigned unto death, even so might grace reign through righteousness unto eternal life by Jesus Christ our Lord.</h5><br>
+        <p><span class="verse">Rom_6:3</span> Know ye not, that so many of us as were baptized into Jesus Christ were baptized into his death?</h5><br>
+        <p><span class="verse">Rom_6:4</span> Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life.</h5><br>
+        <p><span class="verse">Rom_6:5</span> For if we have been planted together in the likeness of his death, we shall be also in the likeness of his resurrection:</h5><br>
+        <p><span class="verse">Rom_6:9</span> Knowing that Christ being raised from the dead dieth no more; death hath no more dominion over him.</h5><br>
+        <p><span class="verse">Rom_6:16</span> Know ye not, that to whom ye yield yourselves servants to obey, his servants ye are to whom ye obey; whether of sin unto death, or of obedience unto righteousness?</h5><br>
+        <p><span class="verse">Rom_6:21</span> What fruit had ye then in those things whereof ye are now ashamed? for the end of those things is death.</h5><br>
+        <p><span class="verse">Rom_6:23</span> For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.</h5><br>
+        <p><span class="verse">Rom_7:5</span> For when we were in the flesh, the motions of sins, which were by the law, did work in our members to bring forth fruit unto death.</h5><br>
+        <p><span class="verse">Rom_8:6</span> For to be carnally minded is death; but to be spiritually minded is life and peace.</h5><br>
+        <p><span class="verse">1Co_15:21</span> For since by man came death, by man came also the resurrection of the dead.</h5><br>
+        <p><span class="verse">1Co_15:26</span> The last enemy that shall be destroyed is death.</h5><br>
+        <p><span class="verse">1Co_15:54</span> So when this corruptible shall have put on incorruption, and this mortal shall have put on immortality, then shall be brought to pass the saying that is written, Death is swallowed up in victory.</h5><br>
+        <p><span class="verse">Jas_1:15</span> Then when lust hath conceived, it bringeth forth sin: and sin, when it is finished, bringeth forth death.</h5><br>
+        <p><span class="verse">Rev_21:4</span> And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away.
         </h5><br>
-        <h5></h5><br>
+        
 
     
     
@@ -119,6 +149,25 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+function myFunction4() {
+  var element = document.getElementById("font");
+  if (element.classList === "w3-large") {
+    element.classList.toggle("w3-xlarge") 
+  } else {
+    element.classList.toggle("w3-xlarge")
+  }
+
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+  // Toggle light-blue text on all elements with class "verse"
+  document.querySelectorAll('.verse').forEach(el => {
+    el.classList.toggle("w3-text-light-blue");
+  });
+}
+
 </script>
 <script src="script.js"></script>
 </body>
