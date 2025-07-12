@@ -8,15 +8,32 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/d1a6249b79.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 
-  .dark-mode {
+body.dark-mode {
   background-color: #121212;
-  color: white;
+  color: #ffffff;
+}
+
+body.dark-mode h5 {
+  color: #ffffff;
+}
+
+body.dark-mode .w3-bar {
+  background-color: #222 !important;
+}
+
+body.dark-mode .w3-bar .w3-bar-item {
+  color: #ffffff !important;
+}
+
+body.dark-mode .w3-light-grey {
+  background-color: #1e1e1e !important;
 }
 </style>
 </head>
@@ -25,32 +42,36 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+  <div class="w3-bar w3-black w3-card  w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-yellow w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-yellow">Home</a>
-    <a href="perfect.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Perfect</a>
-    <a href="sin.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Sin</a>
-    <a href="death.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Death</a>
     
-    <a href="hg.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">The Holy Ghost</a>
-    <a href="tongues.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Tongues</a>
+    
+    <a href="worry.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Worry</a>
+    <a href="sin.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Sin</a>
     <a href="fp.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">False Prophet</a>
+   
+    <a href="hg.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">The Holy Ghost</a>
     <a href="life.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Life</a>
-    <a href="javascript:void(0);" class="w3-right w3-bar-item w3-button w3-padding-large w3-hover-yellow" onclick="myFunction2()">Night Mode</a>
+    <a href="perfect.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Perfect</a>
+    <a href="life.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Death</a>
+    
+    <i class="w3-btn w3-bar-item w3-margin-center w3-right material-icons w3-text-white" style="font-size:36px" onclick="myFunction4()">find_in_page</i>
+    <i class="w3-btn w3-bar-item w3-margin-center w3-right material-icons w3-text-white " style="font-size:36px" onclick="toggleDarkMode()">brightness_6</i>
     
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="perfect.html" class="w3-bar-item w3-button w3-padding-large">Perfect</a>
+    <a href="worry.html" class="w3-bar-item w3-button w3-padding-large">Worry</a>
     <a href="sin.html" class="w3-bar-item w3-button w3-padding-large">Sin</a>
-    <a href="death.html" class="w3-bar-item w3-button w3-padding-large">Death</a>
+    <a href="death.html" class="w3-bar-item w3-button w3-padding-large">False Prophet</a>
     
     <a href="hg.html" class="w3-bar-item w3-button w3-padding-large">The Holy Ghost</a>
-    <a href="tongues.html" class="w3-bar-item w3-button w3-padding-large">Tongues</a>
-    <a href="fp.html" class="w3-bar-item w3-button w3-padding-large">False Prophet</a>
     <a href="life.html" class="w3-bar-item w3-button w3-padding-large">Life</a>
-  
+    <a href="perfect.html" class="w3-bar-item w3-button w3-padding-large">Perfect</a>
+    <a href="death.html" class="w3-bar-item w3-button w3-padding-large">Death</a>
+   
 
   </div>
 </div>
@@ -72,32 +93,23 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     
       <div class="w3-two-third">
         <h1 class="w3-center">Speaking In Tongues</h1><br>
-        <h5>Mar_16:17  And these signs shall follow them that believe; In my name shall they cast out devils; they shall speak with new tongues;</h5><br>
-        <h5>Rom_8:26  Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but the Spirit itself maketh intercession for us with groanings which cannot be uttered.</h5><br>
-        <h5>Act_2:3  And there appeared unto them cloven tongues like as of fire, and it sat upon each of them.</h5><br>
-        <h5>Act_2:4  And they were all filled with the Holy Ghost, and began to speak with other tongues, as the Spirit gave them utterance.</h5><br>
-        <h5>Act_10:46  For they heard them speak with tongues, and magnify God. Then answered Peter,</h5><br>
-        <h5>Act_19:6  And when Paul had laid his hands upon them, the Holy Ghost came on them; and they spake with tongues, and prophesied.</h5><br>
-        <h5>1Co_12:10  To another the working of miracles; to another prophecy; to another discerning of spirits; to another divers kinds of tongues; to another the interpretation of tongues:</h5><br>
-        <h5>1Co_12:28  And God hath set some in the church, first apostles, secondarily prophets, thirdly teachers, after that miracles, then gifts of healings, helps, governments, diversities of tongues.</h5><br>
-        <h5>1Co_14:5  I would that ye all spake with tongues, but rather that ye prophesied: for greater is he that prophesieth than he that speaketh with tongues, except he interpret, that the church may receive edifying.</h5><br>
-        <h5>1Co_14:6  Now, brethren, if I come unto you speaking with tongues, what shall I profit you, except I shall speak to you either by revelation, or by knowledge, or by prophesying, or by doctrine?</h5><br>   
-        <h5>1Co_14:18  I thank my God, I speak with tongues more than ye all:</h5><br>
-        <h5>1Co_14:22  Wherefore tongues are for a sign, not to them that believe, but to them that believe not: but prophesying serveth not for them that believe not, but for them which believe.</h5><br>
-        <h5>1Co_14:23  If therefore the whole church be come together into one place, and all speak with tongues, and there come in those that are unlearned, or unbelievers, will they not say that ye are mad?</h5><br>
-        <h5>1Co_14:39  Wherefore, brethren, covet to prophesy, and forbid not to speak with tongues.</h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
+        <div id="font" class="w3-container">
+        <p><span class="verse">Mar_16:17</span> <span class="w3-text-red">And these signs shall follow them that believe; In my name shall they cast out devils; they shall speak with new tongues;</span> </h5><br>
+        <p><span class="verse">Rom_8:26</span> Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but the Spirit itself maketh intercession for us with groanings which cannot be uttered.</h5><br>
+        <p><span class="verse">Act_2:3</span> And there appeared unto them cloven tongues like as of fire, and it sat upon each of them.</h5><br>
+        <p><span class="verse">Act_2:4</span> And they were all filled with the Holy Ghost, and began to speak with other tongues, as the Spirit gave them utterance.</h5><br>
+        <p><span class="verse">Act_10:46</span> For they heard them speak with tongues, and magnify God. Then answered Peter,</h5><br>
+        <p><span class="verse">Act_19:6</span> And when Paul had laid his hands upon them, the Holy Ghost came on them; and they spake with tongues, and prophesied.</h5><br>
+        <p><span class="verse">1Co_12:10</span> To another the working of miracles; to another prophecy; to another discerning of spirits; to another divers kinds of tongues; to another the interpretation of tongues:</h5><br>
+        <p><span class="verse">1Co_12:28</span> And God hath set some in the church, first apostles, secondarily prophets, thirdly teachers, after that miracles, then gifts of healings, helps, governments, diversities of tongues.</h5><br>
+        <p><span class="verse">1Co_14:5</span> I would that ye all spake with tongues, but rather that ye prophesied: for greater is he that prophesieth than he that speaketh with tongues, except he interpret, that the church may receive edifying.</h5><br>
+        <p><span class="verse">1Co_14:6</span> Now, brethren, if I come unto you speaking with tongues, what shall I profit you, except I shall speak to you either by revelation, or by knowledge, or by prophesying, or by doctrine?</h5><br>   
+        <p><span class="verse">1Co_14:18</span> I thank my God, I speak with tongues more than ye all:</h5><br>
+        <p><span class="verse">1Co_14:22</span> Wherefore tongues are for a sign, not to them that believe, but to them that believe not: but prophesying serveth not for them that believe not, but for them which believe.</h5><br>
+        <p><span class="verse">1Co_14:231</span> If therefore the whole church be come together into one place, and all speak with tongues, and there come in those that are unlearned, or unbelievers, will they not say that ye are mad?</h5><br>
+        <p><span class="verse">1Co_14:39</span> Wherefore, brethren, covet to prophesy, and forbid not to speak with tongues.</h5><br>
+       
+        
         
 
     
@@ -127,10 +139,18 @@ function myFunction() {
   }
 }
 
-  function myFunction2() {
-  let body = document.body;
-  body.classList.toggle("dark-mode");
+function myFunction4() {
+  var element = document.getElementById("font");
+  if (element.classList === "w3-large") {
+    element.classList.toggle("w3-xlarge") 
+  } else {
+    element.classList.toggle("w3-xlarge")
+  }
 
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
   // Toggle light-blue text on all elements with class "verse"
   document.querySelectorAll('.verse').forEach(el => {
     el.classList.toggle("w3-text-light-blue");
