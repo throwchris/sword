@@ -8,15 +8,32 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/d1a6249b79.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 
-  .dark-mode {
+body.dark-mode {
   background-color: #121212;
-  color: white;
+  color: #ffffff;
+}
+
+body.dark-mode h5 {
+  color: #ffffff;
+}
+
+body.dark-mode .w3-bar {
+  background-color: #222 !important;
+}
+
+body.dark-mode .w3-bar .w3-bar-item {
+  color: #ffffff !important;
+}
+
+body.dark-mode .w3-light-grey {
+  background-color: #1e1e1e !important;
 }
 </style>
 </head>
@@ -25,28 +42,36 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+  <div class="w3-bar w3-black w3-card  w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-yellow w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-yellow">Home</a>
-    <a href="perfect.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Perfect</a>
+    
+    
+    <a href="worry.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Worry</a>
     <a href="sin.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Sin</a>
-    <a href="death.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Death</a>
+    <a href="death.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">False Prophet</a>
+   
     <a href="hg.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">The Holy Ghost</a>
     <a href="tongues.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Tongues</a>
-    <a href="fp.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">False Prophet</a>
-    <a href="life.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Life</a>
+    <a href="perfect.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Perfect</a>
+    <a href="life.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Death</a>
+    
+    <i class="w3-btn w3-bar-item w3-margin-center w3-right material-icons w3-text-white" style="font-size:36px" onclick="myFunction4()">find_in_page</i>
+    <i class="w3-btn w3-bar-item w3-margin-center w3-right material-icons w3-text-white " style="font-size:36px" onclick="toggleDarkMode()">brightness_6</i>
     
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="perfect.html" class="w3-bar-item w3-button w3-padding-large">Perfect</a>
+    <a href="worry.html" class="w3-bar-item w3-button w3-padding-large">Worry</a>
     <a href="sin.html" class="w3-bar-item w3-button w3-padding-large">Sin</a>
-    <a href="death.html" class="w3-bar-item w3-button w3-padding-large">Death</a>
+    <a href="death.html" class="w3-bar-item w3-button w3-padding-large">False Prophet</a>
+    
     <a href="hg.html" class="w3-bar-item w3-button w3-padding-large">The Holy Ghost</a>
     <a href="tongues.html" class="w3-bar-item w3-button w3-padding-large">Tongues</a>
-    <a href="fp.html" class="w3-bar-item w3-button w3-padding-large">False Prophet</a>
-    <a href="life.html" class="w3-bar-item w3-button w3-padding-large">Life</a>
+    <a href="perfect.html" class="w3-bar-item w3-button w3-padding-large">Perfect</a>
+    <a href="life.html" class="w3-bar-item w3-button w3-padding-large">Death</a>
+   
 
   </div>
 </div>
@@ -68,74 +93,58 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     
       <div class="w3-two-third">
         <h1 class="w3-center">Jesus Is Life</h1><br>
-        <h5>Joh_3:16  For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.</h5><br>
-        <h5>Joh_1:4  In him was life; and the life was the light of men.</h5><br>
-        <h5>Joh_4:14  But whosoever drinketh of the water that I shall give him shall never thirst; but the water that I shall give him shall be in him a well of water 
+        <div id="font" class="w3-container">
+        <p><span class="verse">Joh_3:16</span> For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.</h5><br>
+        <p><span class="verse">Joh_1:4</span> In him was life; and the life was the light of men.</h5><br>
+        <p><span class="verse">Joh_4:14</span> But whosoever drinketh of the water that I shall give him shall never thirst; but the water that I shall give him shall be in him a well of water 
             springing up into everlasting life.</h5><br>
-        <h5>Joh_5:24  Verily, verily, I say unto you, He that heareth my word, and believeth on him that sent me, hath everlasting life, and shall not come into condemnation; but is passed from death unto life.</h5><br>
-        <h5>Joh_5:26  For as the Father hath life in himself; so hath he given to the Son to have life in himself;</h5><br>
-        <h5>Joh_6:27  Labour not for the meat which perisheth, but for that meat which endureth unto everlasting life, which the Son of man shall give unto you: for him hath God the Father sealed.</h5><br>
-        <h5>Joh_6:33  For the bread of God is he which cometh down from heaven, and giveth life unto the world.</h5><br>
-        <h5>Joh_6:35  And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst.</h5><br>
-        <h5>Joh_6:40  And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day.</h5><br>   
-        <h5>Joh_6:47  Verily, verily, I say unto you, He that believeth on me hath everlasting life.</h5><br>
-        <h5>Joh_6:48  I am that bread of life.</h5><br>
-        <h5>Joh_6:51  I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world.</h5><br>
-        <h5>Joh_6:53  Then Jesus said unto them, Verily, verily, I say unto you, Except ye eat the flesh of the Son of man, and drink his blood, ye have no life in you.</h5><br>
-        <h5>Joh_6:54  Whoso eateth my flesh, and drinketh my blood, hath eternal life; and I will raise him up at the last day.</h5><br>
-        <h5>Joh_6:63  It is the spirit that quickeneth; the flesh profiteth nothing: the words that I speak unto you, they are spirit, and they are life.</h5><br>
-        <h5>Joh_6:68  Then Simon Peter answered him, Lord, to whom shall we go? thou hast the words of eternal life.</h5><br>
-        <h5>Joh_8:12  Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life.</h5><br>
-        <h5>Joh_10:10  The thief cometh not, but for to steal, and to kill, and to destroy: I am come that they might have life, and that they might have it more abundantly.</h5><br>
-        <h5>Joh_10:11  I am the good shepherd: the good shepherd giveth his life for the sheep.</h5><br>
-        <h5>Joh_10:15  As the Father knoweth me, even so know I the Father: and I lay down my life for the sheep.</h5><br>
-        <h5>Joh_10:17  Therefore doth my Father love me, because I lay down my life, that I might take it again.</h5><br>
-        <h5>Joh_10:28  And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand.</h5><br>
-        <h5>Joh_11:25  Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live:</h5><br>
-        <h5>Joh_12:25  He that loveth his life shall lose it; and he that hateth his life in this world shall keep it unto life eternal.</h5><br>
-        <h5>Joh_12:50  And I know that his commandment is life everlasting: whatsoever I speak therefore, even as the Father said unto me, so I speak.</h5><br>
-        <h5>Joh_14:6  Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.</h5><br>
-        <h5>Joh_15:13  Greater love hath no man than this, that a man lay down his life for his friends.</h5><br>
-        <h5>Joh_17:2  As thou hast given him power over all flesh, that he should give eternal life to as many as thou hast given him.</h5><br>
-        <h5>Joh_17:3  And this is life eternal, that they might know thee the only true God, and Jesus Christ, whom thou hast sent.</h5><br>
-        <h5>Joh_20:31  But these are written, that ye might believe that Jesus is the Christ, the Son of God; and that believing ye might have life through his name.</h5><br>
-        <h5>Rom_5:17  For if by one man's offence death reigned by one; much more they which receive abundance of grace and of the gift of righteousness shall reign in life by one, Jesus Christ.)</h5><br>
-        <h5>Rom_6:4  Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life.</h5><br>
-        <h5>Rom_6:23  For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.</h5><br>
-        <h5>Rom_8:6  For to be carnally minded is death; but to be spiritually minded is life and peace.</h5><br>
-        <h5>Rom_8:10  And if Christ be in you, the body is dead because of sin; but the Spirit is life because of righteousness.</h5><br>
-        <h5>Gal_6:8  For he that soweth to his flesh shall of the flesh reap corruption; but he that soweth to the Spirit shall of the Spirit reap life everlasting.</h5><br>
-        <h5>Col_3:3  For ye are dead, and your life is hid with Christ in God.</h5><br>
-        <h5>1Pe_3:10  For he that will love life, and see good days, let him refrain his tongue from evil, and his lips that they speak no guile:</h5><br>
-        <h5>1Jn_1:1  That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked upon, and our hands have handled, of the Word of life;</h5><br>
-        <h5>1Jn_1:2  (For the life was manifested, and we have seen it, and bear witness, and shew unto you that eternal life, which was with the Father, and was manifested unto us;)</h5><br>
-        <h5>Rev_2:7  He that hath an ear, let him hear what the Spirit saith unto the churches; To him that overcometh will I give to eat of the tree of life, which is in the midst of the paradise of God.</h5><br>
-        <h5>Rev_3:5  He that overcometh, the same shall be clothed in white raiment; and I will not blot out his name out of the book of life, but I will confess his name before my Father, and before his angels.</h5><br>
-        <h5>Rev_20:15  And whosoever was not found written in the book of life was cast into the lake of fire.</h5><br>
-        <h5>Rev_21:6  And he said unto me, It is done. I am Alpha and Omega, the beginning and the end. I will give unto him that is athirst of the fountain of the water of life freely.</h5><br>
-        <h5>Rev_22:14  Blessed are they that do his commandments, that they may have right to the tree of life, and may enter in through the gates into the city.</h5><br>
-        <h5>Rev_22:17  And the Spirit and the bride say, Come. And let him that heareth say, Come. And let him that is athirst come. And whosoever will, let him take the water of life freely.</h5><br>
-        <h5>Rev_22:19  And if any man shall take away from the words of the book of this prophecy, God shall take away his part out of the book of life, and out of the holy city, and from the things which are written in this book.</h5><br>
-        <h5>Gen_2:7  And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.</h5><br>
-        <h5>Gen_2:9  And out of the ground made the LORD God to grow every tree that is pleasant to the sight, and good for food; the tree of life also in the midst of the garden, and the tree of knowledge of good and evil.</h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-        <h5></h5><br>
-
-    
+        <p><span class="verse">Joh_5:24</span><span class="w3-text-red">Verily, verily, I say unto you, He that heareth my word, and believeth on him that sent me, hath everlasting life, and shall not come into condemnation; but is passed from death unto life.</span> </h5><br>
+        <p><span class="verse">Joh_5:26</span> <span class="w3-text-red">For as the Father hath life in himself; so hath he given to the Son to have life in himself;</span></h5><br>
+        <p><span class="verse">Joh_6:27</span> <span class="w3-text-red">Labour not for the meat which perisheth, but for that meat which endureth unto everlasting life, which the Son of man shall give unto you: for him hath God the Father sealed.</span></h5><br>
+        <p><span class="verse">Joh_6:33</span> <span class="w3-text-red">For the bread of God is he which cometh down from heaven, and giveth life unto the world.</span></h5><br>
+        <p><span class="verse">Joh_6:35</span> And Jesus said unto them, <span class="w3-text-red">I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst.</span></h5><br>
+        <p><span class="verse">Joh_6:40</span> <span class="w3-text-red">And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day.</span></h5><br>   
+        <p><span class="verse">Joh_6:47</span> <span class="w3-text-red">Verily, verily, I say unto you, He that believeth on me hath everlasting life.</span></h5><br>
+        <p><span class="verse">Joh_6:48</span> <span class="w3-text-red">I am that bread of life.</span></h5><br>
+        <p><span class="verse">Joh_6:51</span> <span class="w3-text-red">I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world.</span></h5><br>
+        <p><span class="verse">Joh_6:53</span> Then Jesus said unto them, <span class="w3-text-red">Verily, verily, I say unto you, Except ye eat the flesh of the Son of man, and drink his blood, ye have no life in you.</span></h5><br>
+        <p><span class="verse">Joh_6:54</span> <span class="w3-text-red">Whoso eateth my flesh, and drinketh my blood, hath eternal life; and I will raise him up at the last day.</h5><br>
+          <p><span class="verse">Joh_6:63</span> <span class="w3-text-red">It is the spirit that quickeneth; the flesh profiteth nothing: the words that I speak unto you, they are spirit, and they are life.</span></span></h5><br>
+        <p><span class="verse">Joh_6:68</span> Then Simon Peter answered him, Lord, to whom shall we go? thou hast the words of eternal life.</h5><br>
+        <p><span class="verse">Joh_8:12</span> Then spake Jesus again unto them, saying, <span class="w3-text-red">I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life.</span></h5><br>
+        <p><span class="verse">Joh_10:10</span> <span class="w3-text-red">The thief cometh not, but for to steal, and to kill, and to destroy: I am come that they might have life, and that they might have it more abundantly.</span></h5><br>
+        <p><span class="verse">Joh_10:11</span> <span class="w3-text-red">I am the good shepherd: the good shepherd giveth his life for the sheep.</span></h5><br>
+        <p><span class="verse">Joh_10:15</span> <span class="w3-text-red">As the Father knoweth me, even so know I the Father: and I lay down my life for the sheep.</span></h5><br>
+        <p><span class="verse">Joh_10:17</span> <span class="w3-text-red">Therefore doth my Father love me, because I lay down my life, that I might take it again.</span></h5><br>
+        <p><span class="verse">Joh_10:28</span> <span class="w3-text-red">And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand.</span></h5><br>
+        <p><span class="verse">Joh_11:25</span> Jesus said unto her, <span class="w3-text-red">I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live:</span></h5><br>
+        <p><span class="verse">Joh_12:25</span> <span class="w3-text-red">He that loveth his life shall lose it; and he that hateth his life in this world shall keep it unto life eternal.</span></h5><br>
+        <p><span class="verse">Joh_12:50</span> <span class="w3-text-red">And I know that his commandment is life everlasting: whatsoever I speak therefore, even as the Father said unto me, so I speak.</span></h5><br>
+        <p><span class="verse">Joh_14:6</span> Jesus saith unto him, <span class="w3-text-red">I am the way, the truth, and the life: no man cometh unto the Father, but by me.</span></h5><br>
+        <p><span class="verse">Joh_15:13</span> <span class="w3-text-red">Greater love hath no man than this, that a man lay down his life for his friends.</span></h5><br>
+        <p><span class="verse">Joh_17:2</span> <span class="w3-text-red">As thou hast given him power over all flesh, that he should give eternal life to as many as thou hast given him.</span></h5><br>
+        <p><span class="verse">Joh_17:3</span> <span class="w3-text-red">And this is life eternal, that they might know thee the only true God, and Jesus Christ, whom thou hast sent.</span></h5><br>
+        <p><span class="verse">Joh_20:31</span> But these are written, that ye might believe that Jesus is the Christ, the Son of God; and that believing ye might have life through his name.</h5><br>
+        <p><span class="verse">Rom_5:17</span> For if by one man's offence death reigned by one; much more they which receive abundance of grace and of the gift of righteousness shall reign in life by one, Jesus Christ.)</h5><br>
+        <p><span class="verse">Rom_6:4</span> Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life.</h5><br>
+        <p><span class="verse">Rom_6:23</span> For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.</h5><br>
+        <p><span class="verse">Rom_8:6 </span>For to be carnally minded is death; but to be spiritually minded is life and peace.</h5><br>
+        <p><span class="verse">Rom_8:10</span> And if Christ be in you, the body is dead because of sin; but the Spirit is life because of righteousness.</h5><br>
+        <p><span class="verse">Gal_6:8</span> For he that soweth to his flesh shall of the flesh reap corruption; but he that soweth to the Spirit shall of the Spirit reap life everlasting.</h5><br>
+        <p><span class="verse">Col_3:3</span> For ye are dead, and your life is hid with Christ in God.</h5><br>
+        <p><span class="verse">1Pe_3:10</span> For he that will love life, and see good days, let him refrain his tongue from evil, and his lips that they speak no guile:</h5><br>
+        <p><span class="verse">1Jn_1:1</span> That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked upon, and our hands have handled, of the Word of life;</h5><br>
+        <p><span class="verse">1Jn_1:2</span> (For the life was manifested, and we have seen it, and bear witness, and shew unto you that eternal life, which was with the Father, and was manifested unto us;)</h5><br>
+        <p><span class="verse">Rev_2:7</span> <span class="w3-text-red">He that hath an ear, let him hear what the Spirit saith unto the churches; To him that overcometh will I give to eat of the tree of life, which is in the midst of the paradise of God.</span></h5><br>
+        <p><span class="verse">Rev_3:5</span> <span class="w3-text-red">He that overcometh, the same shall be clothed in white raiment; and I will not blot out his name out of the book of life, but I will confess his name before my Father, and before his angels.</span></h5><br>
+        <p><span class="verse">Rev_20:15</span> And whosoever was not found written in the book of life was cast into the lake of fire.</h5><br>
+        <p><span class="verse">Rev_21:6</span> And he said unto me, <span class="w3-text-red">It is done. I am Alpha and Omega, the beginning and the end. I will give unto him that is athirst of the fountain of the water of life freely.</span></h5><br>
+        <p><span class="verse">Rev_22:14</span> Blessed are they that do his commandments, that they may have right to the tree of life, and may enter in through the gates into the city.</h5><br>
+        <p><span class="verse">Rev_22:17</span> And the Spirit and the bride say, Come. And let him that heareth say, Come. And let him that is athirst come. And whosoever will, let him take the water of life freely.</h5><br>
+        <p><span class="verse">Rev_22:19</span> And if any man shall take away from the words of the book of this prophecy, God shall take away his part out of the book of life, and out of the holy city, and from the things which are written in this book.</h5><br>
+        <p><span class="verse">Gen_2:7</span> And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.</h5><br>
+        <p><span class="verse">Gen_2:9</span> And out of the ground made the LORD God to grow every tree that is pleasant to the sight, and good for food; the tree of life also in the midst of the garden, and the tree of knowledge of good and evil.</h5><br>
+          
     
     
     
@@ -160,6 +169,24 @@ function myFunction() {
   } else { 
     x.className = x.className.replace(" w3-show", "");
   }
+}
+
+function myFunction4() {
+  var element = document.getElementById("font");
+  if (element.classList === "w3-large") {
+    element.classList.toggle("w3-xlarge") 
+  } else {
+    element.classList.toggle("w3-xlarge")
+  }
+
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+  // Toggle light-blue text on all elements with class "verse"
+  document.querySelectorAll('.verse').forEach(el => {
+    el.classList.toggle("w3-text-light-blue");
+  });
 }
 </script>
 <script src="script.js"></script>
