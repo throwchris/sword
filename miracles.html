@@ -1,299 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Jesus Heals</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
-<script src="https://kit.fontawesome.com/d1a6249b79.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="style.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
-.my-enlarge-text:hover {
-  font-size: 200%; /* Adjust as needed */
-}
+    <title>Jesus Heals</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d1a6249b79.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
+        }
 
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
 
-body.dark-mode h5 {
-  color: #ffffff;
-}
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 200px
+        }
 
-body.dark-mode .w3-bar {
-  background-color: #222 !important;
-}
+        .my-enlarge-text:hover {
+            font-size: 200%;
+            /* Adjust as needed */
+        }
 
-body.dark-mode .w3-bar .w3-bar-item {
-  color: #ffffff !important;
-}
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
 
-body.dark-mode .w3-light-grey {
-  background-color: #1e1e1e !important;
-}
+        body.dark-mode h5 {
+            color: #ffffff;
+        }
 
-#font {
-  line-height: 1.8; /* You can adjust 1.8 to 1.5 or 2 as needed */
-}
+        body.dark-mode .w3-bar {
+            background-color: #222 !important;
+        }
 
-</style>
+        body.dark-mode .w3-bar .w3-bar-item {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .w3-light-grey {
+            background-color: #1e1e1e !important;
+        }
+
+        #font {
+            line-height: 1.8;
+            /* You can adjust 1.8 to 1.5 or 2 as needed */
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card  w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-yellow w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-yellow">Home</a>
-    <a href="perfect.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Perfect</a>
-    <a href="sin.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Sin</a>
-    <a href="death.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Death</a>
-   
-    <a href="hg.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">The Holy Ghost</a>
-    <a href="tongues.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Tongues</a>
-    <a href="fp.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">False Prophet</a>
-    <a href="life.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Life</a>
-    <a href="mosthigh.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">The Most High</a>
-    <a href="worry.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Worry</a>
-    <a href="Father.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">The Father</a>
-    <i class="w3-btn w3-bar-item w3-margin-center w3-right material-icons w3-text-white" style="font-size:36px" onclick="myFunction4()">find_in_page</i>
-    <i class="w3-btn w3-bar-item w3-margin-center w3-right material-icons w3-text-white " style="font-size:36px" onclick="toggleDarkMode()">brightness_6</i>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card  w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-yellow w3-large w3-red"
+                href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-yellow">Home</a>
+            <a href="perfect.html"
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Perfect</a>
+            <a href="sin.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Sin</a>
+            <a href="death.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Death</a>
 
-    
-  </div>
+            <a href="hg.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">The Holy
+                Ghost</a>
+            <a href="tongues.html"
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Tongues</a>
+            <a href="fp.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">False
+                Prophet</a>
+            <a href="life.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Life</a>
+            <a href="mosthigh.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">The
+                Most High</a>
+            <a href="worry.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">Worry</a>
+            <a href="Father.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-yellow">The
+                Father</a>
+            <i class="w3-btn w3-bar-item w3-margin-center w3-right material-icons w3-text-white" style="font-size:36px"
+                onclick="myFunction4()">find_in_page</i>
+            <i class="w3-btn w3-bar-item w3-margin-center w3-right material-icons w3-text-white " style="font-size:36px"
+                onclick="toggleDarkMode()">brightness_6</i>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="perfect.html" class="w3-bar-item w3-button w3-padding-large">Perfect</a>
-    <a href="sin.html" class="w3-bar-item w3-button w3-padding-large">Sin</a>
-    <a href="death.html" class="w3-bar-item w3-button w3-padding-large">Death</a>
-    
-    <a href="hg.html" class="w3-bar-item w3-button w3-padding-large">The Holy Ghost</a>
-    <a href="tongues.html" class="w3-bar-item w3-button w3-padding-large">Tongues</a>
-    <a href="fp.html" class="w3-bar-item w3-button w3-padding-large">False Prophet</a>
-    <a href="life.html" class="w3-bar-item w3-button w3-padding-large">Life</a>
-    <a href="Father.html" class="w3-bar-item w3-button w3-padding-large">The Father</a>
-    <a href="worry.html" class="w3-bar-item w3-button w3-padding-large">Worry</a>
-    <a href="mosthigh.html" class="w3-bar-item w3-button w3-padding-large">The Most High</a>
-   
 
-  </div>
-</div>
+        </div>
 
-<!-- Header 
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="perfect.html" class="w3-bar-item w3-button w3-padding-large">Perfect</a>
+            <a href="sin.html" class="w3-bar-item w3-button w3-padding-large">Sin</a>
+            <a href="death.html" class="w3-bar-item w3-button w3-padding-large">Death</a>
+
+            <a href="hg.html" class="w3-bar-item w3-button w3-padding-large">The Holy Ghost</a>
+            <a href="tongues.html" class="w3-bar-item w3-button w3-padding-large">Tongues</a>
+            <a href="fp.html" class="w3-bar-item w3-button w3-padding-large">False Prophet</a>
+            <a href="life.html" class="w3-bar-item w3-button w3-padding-large">Life</a>
+            <a href="Father.html" class="w3-bar-item w3-button w3-padding-large">The Father</a>
+            <a href="worry.html" class="w3-bar-item w3-button w3-padding-large">Worry</a>
+            <a href="mosthigh.html" class="w3-bar-item w3-button w3-padding-large">The Most High</a>
+
+
+        </div>
+    </div>
+
+    <!-- Header 
 <header class="w3-container w3-black w3-center" style="padding:128px 16px">
   <h1 class="w3-margin w3-jumbo">WHAT DOES THE WORD SAY</h1>
   <p class="w3-xlarge">Bible Truth</p>
   <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
 </header>
 -->
-<!-- First Grid -->
+    <!-- First Grid -->
 
 
-<!-- Second Grid -->
-<div class="w3-padding-64 w3-container">
-  <div class="w3-content">
-    
-    
-      <div class="w3-two-third">
-       
-        <h1 class="w3-center descr">Miracles, Healings, Casting out devils</h1><br>
-        <div id="font" class="w3-container">
-  
-  <section>
-  <p class="w3-center descr">Jesus Cleanses a Leper: <span class="verse w3-justify">Matthew 8:1-4</span></p>
-  <p>  <span class="w3-small w3-opacity">1</span> When he was come down from the mountain, great multitudes followed him. 
-    <span class="w3-small w3-opacity">2</span> And, behold, there came a leper and worshipped him, saying, Lord, if thou wilt, thou canst make me clean. 
-    <span class="w3-small w3-opacity">3</span> And Jesus put forth his hand, and touched him, saying,<span class= w3-text-red> I will; be thou clean.</span> 
-    And immediately his leprosy was cleansed. <span class="w3-small w3-opacity">4</span> And Jesus saith unto him,<span class= w3-text-red> See thou 
-        tell no man; but go thy way, shew thyself to the priest, and offer the gift that Moses commanded, for a testimony unto them.</span></p>
-
-    </section>
-    
-
-    <section>
-        <p class="w3-center descr">Jesus Heals Centurion's Servant: <span class="verse w3-justify">Matthew 8:5-13</span></p>
-        <p>  <span class="w3-small w3-opacity">5</span> And when Jesus was entered into Capernaum, there came unto him a centurion, beseeching him, 
-          <span class="w3-small w3-opacity">6</span> And saying, Lord, my servant lieth at home sick of the palsy, grievously tormented. 
-          <span class="w3-small w3-opacity">7</span> And Jesus saith unto him,<span class= w3-text-red> I will come and heal him.</span> 
-          
-          <span class="w3-small w3-opacity">8</span> The centurion answered and said, Lord, I am not worthy that thou shouldest come under my roof: 
-          but speak the word only, and my servant shall be healed.
-              <span class="w3-small w3-opacity">9</span>For I am a man under authority, having soldiers under me: and I say to this man, Go, and he goeth; and to another, Come, and he cometh; and to my servant, Do this, and he doeth it.
-              <span class="w3-small w3-opacity">10</span>When Jesus heard it, he marvelled, and said to them that followed,<span class= w3-text-red> Verily I say unto you, I have not found so great faith, no, not in Israel.</span>
-              <span class="w3-small w3-opacity">11</span><span class= w3-text-red> And I say unto you, That many shall come from the east and west, and shall sit down with Abraham, and Isaac, and Jacob, in the kingdom of heaven.</span>
-              <span class="w3-small w3-opacity">12</span><span class= w3-text-red> But the children of the kingdom shall be cast out into outer darkness: there shall be weeping and gnashing of teeth.</span>
-              <span class="w3-small w3-opacity">13</span> And Jesus said unto the centurion,<span class= w3-text-red> Go thy way; and as thou hast believed, so be it done unto thee.</span> And his servant was healed in the selfsame hour.
-              <span class="w3-small w3-opacity"></span>
-              <span class="w3-small w3-opacity"></span></p>
-      
-          </section>
-
-          <section>
-            <p class="w3-center descr">Jesus Heals All: <span class="verse w3-justify">Matthew 8:14-17</span></p>
-            <p>  <span class="w3-small w3-opacity">14</span> And when Jesus was come into Peter's house, he saw his wife's mother laid, and sick of a fever. 
-              <span class="w3-small w3-opacity">15</span> And he touched her hand, and the fever left her: and she arose, and ministered unto them. 
-              <span class="w3-small w3-opacity">16</span> When the even was come, they brought unto him many that were possessed with devils: and he cast out the spirits with his word, and healed all that were sick: 
-              
-              <span class="w3-small w3-opacity">17</span> That it might be fulfilled which was spoken by Esaias the prophet, saying, Himself took our infirmities, and bare our sicknesses.
-                  
-                  <span class="w3-small w3-opacity"></span></p>
-          
-              </section>
-    
-    
+    <!-- Second Grid -->
+    <div class="w3-padding-64 w3-container">
+        <div class="w3-content">
 
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <p> <span class="verse"></span> <span class= w3-text-red></span></p>
-  <p> <span class="verse"></span> <span class= w3-text-red></span></p>
-  <p> <span class="verse"></span> </p>
-  
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p><br>
-  <p> <span class="verse"></span>  <span onclick="toggleExplanation(this, 'Strongs #G3309: μεριμνάω merimnáō, mer-im-nah-o; from G3308; to be anxious about:—(be, have) care (-ful), take thought.')" class="w3-text-green"><strong></span> </p>
-  
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  <p> <span class="verse"></span> </p>
-  
-  <p> <span class="verse"></span> </p><br>
+            <div class="w3-two-third">
 
-        
-    
-    
-    
+                <h1 class="w3-center descr">Miracles, Healings, Casting out devils</h1><br>
+                <div id="font" class="w3-container">
+
+                    <section>
+                        <p class="w3-center descr">Jesus Cleanses a Leper: <span class="verse w3-justify">Matthew
+                                8:1-4</span></p>
+                        <p> <span class="w3-small w3-opacity">1</span> When he was come down from the mountain, great
+                            multitudes followed him.
+                            <span class="w3-small w3-opacity">2</span> And, behold, there came a leper and worshipped
+                            him, saying, Lord, if thou wilt, thou canst make me clean.
+                            <span class="w3-small w3-opacity">3</span> And Jesus put forth his hand, and touched him,
+                            saying,<span class=w3-text-red> I will; be thou clean.</span>
+                            And immediately his leprosy was cleansed. <span class="w3-small w3-opacity">4</span> And
+                            Jesus saith unto him,<span class=w3-text-red> See thou
+                                tell no man; but go thy way, shew thyself to the priest, and offer the gift that Moses
+                                commanded, for a testimony unto them.</span>
+                        </p>
+
+                    </section>
+
+
+                    <section>
+                        <p class="w3-center descr">Jesus Heals Centurion's Servant: <span
+                                class="verse w3-justify">Matthew 8:5-13</span></p>
+                        <p> <span class="w3-small w3-opacity">5</span> And when Jesus was entered into Capernaum, there
+                            came unto him a centurion, beseeching him,
+                            <span class="w3-small w3-opacity">6</span> And saying, Lord, my servant lieth at home sick
+                            of the palsy, grievously tormented.
+                            <span class="w3-small w3-opacity">7</span> And Jesus saith unto him,<span class=w3-text-red>
+                                I will come and heal him.</span>
+
+                            <span class="w3-small w3-opacity">8</span> The centurion answered and said, Lord, I am not
+                            worthy that thou shouldest come under my roof: but speak the word only, and my servant shall
+                            be healed.
+                            <span class="w3-small w3-opacity">9</span>For I am a man under authority, having soldiers
+                            under me: and I say to this man, Go, and he goeth; and to another, Come, and he cometh; and
+                            to my servant, Do this, and he doeth it.
+                            <span class="w3-small w3-opacity">10</span>When Jesus heard it, he marvelled, and said to
+                            them that followed,<span class=w3-text-red> Verily I say unto you, I have not found so great
+                                faith, no, not in Israel.</span>
+                            <span class="w3-small w3-opacity">11</span><span class=w3-text-red> And I say unto you, That
+                                many shall come from the east and west, and shall sit down with Abraham, and Isaac, and
+                                Jacob, in the kingdom of heaven.</span>
+                            <span class="w3-small w3-opacity">12</span><span class=w3-text-red> But the children of the
+                                kingdom shall be cast out into outer darkness: there shall be weeping and gnashing of
+                                teeth.</span>
+                            <span class="w3-small w3-opacity">13</span> And Jesus said unto the centurion,<span
+                                class=w3-text-red> Go thy way; and as thou hast believed, so be it done unto
+                                thee.</span> And his servant was healed in the selfsame hour.
+                            <span class="w3-small w3-opacity"></span>
+                            <span class="w3-small w3-opacity"></span>
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <p class="w3-center descr">Jesus Heals All: <span class="verse w3-justify">Matthew
+                                8:14-17</span></p>
+                        <p> <span class="w3-small w3-opacity">14</span> And when Jesus was come into Peter's house, he
+                            saw his wife's mother laid, and sick of a fever.
+                            <span class="w3-small w3-opacity">15</span> And he touched her hand, and the fever left her:
+                            and she arose, and ministered unto them.
+                            <span class="w3-small w3-opacity">16</span> When the even was come, they brought unto him
+                            many that were possessed with devils: and he cast out the spirits with his word, and healed
+                            all that were sick:
+
+                            <span class="w3-small w3-opacity">17</span> That it might be fulfilled which was spoken by
+                            Esaias the prophet, saying, Himself took our infirmities, and bare our sicknesses.
+
+                            <span class="w3-small w3-opacity"></span>
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <p class="w3-center descr">Jesus Calms a Storm: <span class="verse w3-justify">Matthew
+                                8:23-24</span></p>
+                        <p> <span class="w3-small w3-opacity">23</span> And when he was entered into a ship, his
+                            disciples followed him.
+                            <span class="w3-small w3-opacity">24</span> And, behold, there arose a great tempest in the
+                            sea, insomuch that the ship was covered with the waves: but he was asleep.
+                            <span class="w3-small w3-opacity">25</span> And his disciples came to him, and awoke him,
+                            saying, Lord, save us: we perish.
+
+                            <span class="w3-small w3-opacity">26</span> And he saith unto them, <span
+                                class="w3-text-red">Why are ye fearful, O ye of little faith?</span> Then he arose, and
+                            rebuked the winds and the sea; and there was a great calm.
+
+                            <span class="w3-small w3-opacity">27</span>But the men marvelled, saying, What manner of man
+                            is this, that even the winds and the sea obey him!
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <p class="w3-center descr">Jesus Heals Two Men with Demons: <span
+                                class="verse w3-justify">Matthew 8:28-34</span>
+                        <p> <span class="w3-small w3-opacity">28</span> And when he was come to the other side into the
+                            country of the Gergesenes, there met him two possessed with devils, coming out of the tombs,
+                            exceeding fierce, so that no man might pass by that way.
+                            <span class="w3-small w3-opacity">29</span> And, behold, they cried out, saying, What have
+                            we to do with thee, Jesus, thou Son of God? art thou come hither to torment us before the
+                            time?
+                            <span class="w3-small w3-opacity">30</span> And there was a good way off from them an herd
+                            of many swine feeding.
+
+                            <span class="w3-small w3-opacity">31</span> So the devils besought him, saying, If thou cast
+                            us out, suffer us to go away into the herd of swine.
+
+                            <span class="w3-small w3-opacity">32</span> And he said unto them, <span
+                                class="w3-text-red">Go.</span> And when they were come out, they went into the herd of
+                            swine: and, behold, the whole herd of swine ran violently down a steep place into the sea,
+                            and perished in the waters.
+                        </p>
+                        <span class="w3-small w3-opacity">33</span> And they that kept them fled, and went their ways
+                        into the city, and told every thing, and what was befallen to the possessed of the devils.
+                        <span class="w3-small w3-opacity">34</span> And, behold, the whole city came out to meet Jesus:
+                        and when they saw him, they besought him that he would depart out of their coasts.</p>
+
+                    </section>
+
+                    <section>
+                        <p class="w3-center descr">Jesus, Arise and Walk: <span class="verse w3-justify">Matthew
+                                9:1-8</span>
+                        <p> <span class="w3-small w3-opacity">1</span> And he entered into a ship, and passed over, and
+                            came into his own city.
+                            <span class="w3-small w3-opacity">2</span> And, behold, they brought to him a man sick of
+                            the palsy, lying on a bed: and Jesus seeing their faith said unto the sick of the palsy;
+                            <span class="w3-text-red">Son, be of good cheer; thy sins be forgiven thee.</span>
+                            <span class="w3-small w3-opacity">3</span> And, behold, certain of the scribes said within
+                            themselves, This man blasphemeth.
+
+                            <span class="w3-small w3-opacity">4</span> And Jesus knowing their thoughts said, <span
+                                class="w3-text-red">Wherefore think ye evil in your hearts?</span>
+
+                            <span class="w3-small w3-opacity">5</span> <span class="w3-text-red">For whether is easier,
+                                to say, Thy sins be forgiven thee; or to say, Arise, and walk?</span>
+                            <span class="w3-small w3-opacity">6</span> <span class="w3-text-red">But that ye may know
+                                that the Son of man hath power on earth to forgive sins,</span> (then saith he to the
+                            sick of the palsy,)<span class="w3-text-red">Arise, take up thy bed, and go unto thine
+                                house.</span>
+                            <span class="w3-small w3-opacity">7</span> And he arose, and departed to his house.
+                            <span class="w3-small w3-opacity">8</span> But when the multitudes saw it, they marvelled,
+                            and glorified God, which had given such power unto men.
+                        </p>
+                        <span class="w3-text-red"></span>
+                    </section>
+
+                    <section>
+                        <p class="w3-center descr">A Girl Restored to Life and a Woman Healed: <span
+                                class="verse w3-justify">Matthew 9:18-26</span>
+                        <p> <span class="w3-small w3-opacity">18</span> While he spake these things unto them, behold,
+                            there came a certain ruler, and worshipped him, saying, My daughter is even now dead: but
+                            come and lay thy hand upon her, and she shall live.
+                            <span class="w3-small w3-opacity">19</span> And Jesus arose, and followed him, and so did
+                            his disciples.
+                            <span class="w3-small w3-opacity">20</span> And, behold, a woman, which was diseased with an
+                            issue of blood twelve years, came behind him, and touched the hem of his garment:
+
+                            <span class="w3-small w3-opacity">21</span> For she said within herself, If I may but touch
+                            his garment, I shall be whole.
+
+                            <span class="w3-small w3-opacity">22</span> But Jesus turned him about, and when he saw her,
+                            he said,<span class="w3-text-red">Daughter, be of good comfort; thy faith hath made thee
+                                whole.</span> And they laughed him to scorn.
+                            <span class="w3-small w3-opacity">23</span> And when Jesus came into the ruler's house, and
+                            saw the minstrels and the people making a noise,
+                            <span class="w3-small w3-opacity">24</span> He said unto them, <span
+                                class="w3-text-red">Give place: for the maid is not dead, but sleepeth.</span>
+                            <span class="w3-small w3-opacity">25</span> But when the people were put forth, he went in,
+                            and took her by the hand, and the maid arose.
+                            <span class="w3-small w3-opacity">26</span> And the fame hereof went abroad into all that
+                            land.
+                        </p>
+                        <span class="w3-text-red"></span>
+                    </section>
+
+                    <section>
+                        <p class="w3-center descr">Jesus Heals Two Blind Men: <span class="verse w3-justify">Matthew
+                                9:27-31</span>
+                        <p> <span class="w3-small w3-opacity">27</span> And when Jesus departed thence, two blind men
+                            followed him, crying, and saying, Thou Son of David, have mercy on us.
+                            <span class="w3-small w3-opacity">28</span> And when he was come into the house, the blind
+                            men came to him: and Jesus saith unto them, <span class="w3-text-red">Believe ye that I am
+                                able to do this?</span> They said unto him, Yea, Lord.
+                            <span class="w3-small w3-opacity">29</span> Then touched he their eyes, saying,<span
+                                class="w3-text-red">According to your faith be it unto you.</span>
+
+                            <span class="w3-small w3-opacity">30</span> And their eyes were opened; and Jesus straitly
+                            charged them, saying,<span class="w3-text-red">See that no man know it.</span>
+
+                            <span class="w3-small w3-opacity">31</span> But they, when they were departed, spread abroad
+                            his fame in all that country.
+                        </p>
+                        <span class="w3-text-red"></span>
+                    </section>
+
+                    <section>
+                        <p class="w3-center descr">Jesus Heals a Man Unable to Speak: <span
+                                class="verse w3-justify">Matthew 9:32-34</span>
+                        <p> <span class="w3-small w3-opacity">32</span> As they went out, behold, they brought to him a
+                            dumb man possessed with a devil.
+                            <span class="w3-small w3-opacity">33</span> And when the devil was cast out, the dumb spake:
+                            and the multitudes marvelled, saying, It was never so seen in Israel.
+                            <span class="w3-small w3-opacity">34</span> But the Pharisees said, He casteth out devils
+                            through the prince of the devils.
+
+                        </p>
+                        <span class="w3-text-red"></span>
+                    </section>
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <p> <span class="verse"></span> <span class=w3-text-red></span></p>
+                    <p> <span class="verse"></span> <span class=w3-text-red></span></p>
+                    <p> <span class="verse"></span> </p>
+
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p><br>
+                    <p> <span class="verse"></span> <span
+                            onclick="toggleExplanation(this, 'Strongs #G3309: μεριμνάω merimnáō, mer-im-nah-o; from G3308; to be anxious about:—(be, have) care (-ful), take thought.')"
+                            class="w3-text-green"><strong></span> </p>
+
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+                    <p> <span class="verse"></span> </p>
+
+                    <p> <span class="verse"></span> </p><br>
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
     </div>
 
-      
-    </div>
-  </div>
-</div>
-</div>
+
+    <!-- Footer -->
 
 
-<!-- Footer -->
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+    <script src="script.js"></script>
 
+    <script>
+        function toggleExplanation(button, text) {
+            // Check if this button already has an explanation shown
+            let existing = button.parentNode.querySelector('.explanation');
 
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-<script src="script.js"></script>
+            if (existing) {
+                // If it exists, remove it (toggle off)
+                existing.remove();
+            } else {
+                // Remove any other open explanations
+                document.querySelectorAll('.explanation').forEach(el => el.remove());
 
-<script>
-    function toggleExplanation(button, text) {
-      // Check if this button already has an explanation shown
-      let existing = button.parentNode.querySelector('.explanation');
-    
-      if (existing) {
-        // If it exists, remove it (toggle off)
-        existing.remove();
-      } else {
-        // Remove any other open explanations
-        document.querySelectorAll('.explanation').forEach(el => el.remove());
-    
-        // Create and show explanation under this button
-        const para = document.createElement('div');
-        para.className = 'w3-text-green w3-animate-opacity explanation';
-        para.innerText = text;
-        button.parentNode.appendChild(para);
-      }
-    }
+                // Create and show explanation under this button
+                const para = document.createElement('div');
+                para.className = 'w3-text-green w3-animate-opacity explanation';
+                para.innerText = text;
+                button.parentNode.appendChild(para);
+            }
+        }
 
-    function myFunction4() {
-  const fontContainer = document.getElementById("font");
+        function myFunction4() {
+            const fontContainer = document.getElementById("font");
 
-  // Toggle w3-xlarge class on the container
-  fontContainer.classList.toggle("w3-xlarge");
+            // Toggle w3-xlarge class on the container
+            fontContainer.classList.toggle("w3-xlarge");
 
-  // Check whether we're enlarging or shrinking based on the container
-  const isLarge = fontContainer.classList.contains("w3-xlarge");
+            // Check whether we're enlarging or shrinking based on the container
+            const isLarge = fontContainer.classList.contains("w3-xlarge");
 
-  // Loop over all span.w3-small and toggle size accordingly
-  document.querySelectorAll("#font span").forEach(span => {
-    if (isLarge) {
-      if (span.classList.contains("w3-small")) {
-        span.classList.remove("w3-small");
-        span.classList.add("w3-large");
-      }
-    } else {
-      if (span.classList.contains("w3-large")) {
-        span.classList.remove("w3-large");
-        span.classList.add("w3-small");
-      }
-    }
-  });
-}
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
-  // Toggle light-blue text on all elements with class "verse"
-  document.querySelectorAll('.verse').forEach(el => {
-    el.classList.toggle("w3-text-light-blue");
-    document.querySelectorAll('.descr').forEach(el => {
-    el.classList.toggle("w3-text-yellow");
-      });
-})
-}
+            // Loop over all span.w3-small and toggle size accordingly
+            document.querySelectorAll("#font span").forEach(span => {
+                if (isLarge) {
+                    if (span.classList.contains("w3-small")) {
+                        span.classList.remove("w3-small");
+                        span.classList.add("w3-large");
+                    }
+                } else {
+                    if (span.classList.contains("w3-large")) {
+                        span.classList.remove("w3-large");
+                        span.classList.add("w3-small");
+                    }
+                }
+            });
+        }
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            // Toggle light-blue text on all elements with class "verse"
+            document.querySelectorAll('.verse').forEach(el => {
+                el.classList.toggle("w3-text-light-blue");
+
+            });
+            document.querySelectorAll('.descr').forEach(el => {
+                el.classList.toggle("w3-text-yellow");
+            })
+        }
     </script>
 </body>
 </div>
+
 </html>
-
-
-
-    
